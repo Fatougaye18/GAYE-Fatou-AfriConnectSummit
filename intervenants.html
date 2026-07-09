@@ -4,18 +4,159 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Intervenants</title>
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo">AfriConnect <span>Summit</span></a>
+            <ul class="nav-links">
+                <li> <a href="index.html" >Accueil</a></li>
+                <li> <a href="programme.html">Programme</a></li>
+                <li> <a href="intervenants.html" class="acc">Intervenants</a></li>
+                <li> <a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="contact.html" class="btn">S'inscrire</a>
+                <button id="theme-toggle" aria-label="Changer le thème">
+                    <i class="bi bi-moon-stars-fill"> 🌙 </i>
+                </button>
+                <button id="menu-toggle" aria-label="Ouvrir le menu">
+                <i class="bi bi-list"></i>
+            </button>
 
+            </div>
+        </nav>
+        
     </header>
     <main>
+        <!--SECTION HERO-->
+        <section class="page-hero">
+            <div class="container">
+                <p class="bread">
+                   <a href="index.html">Accueil</a> / Intervenants
+            
+                </p>
+                <h1>Nos Intervenants</h1>
+                <p>Rencontrez les experts et leaders d'opinion qui partageront leurs connaissances et expériences lors du AfriConnect Summit.</p>
+            </div>
+        </section>
+        <!--Filtrage dynamique-->
+        <section class="speakers">
+            <div class="container">
+                <div class="filter">
+                    <button class="filter-btn active" data-filter="all">Tous</button>
+                    <button class="filter-btn" data-filter="ia">IA & Tech</button>
+                    <button class="filter-btn" data-filter="business">Business</button>
+                    <button class="filter-btn" data-filter="data">Data</button>
+                    <button class="filter-btn" data-filter="design">Design</button>
+                </div>
+                <!--Liste des intervenants-->
+                <div class="speakers-grid-full">
+                    
+                    <div class="speaker-card" data-category="ia">
+                        <img src="images/expert-ia.jpg" alt="Dr. Awa Diop">
+                        <h3>Dr. Awa Diop</h3>
+                        <p>Expert en Intelligence Artificielle.</p>
+                        <span>Sénégal</span>
+                    </div>
+                    <div class="speaker-card" data-category="business">
+                        <img src="images/innovation.jpg" alt="M. Mamadou Ndiaye">
+                        <h3>M. Mamadou Ndiaye</h3>
+                        <p>Entrepreneur et Innovateur.</p>
+                        <span>Sénégal</span>
+                    </div>
+                    <div class="speaker-card" data-category="data">
+                        <img src="images/ds.jpg" alt="Mme. Fatou Bâ">
+                        <h3>Mme. Fatou Bâ</h3>
+                        <p>Spécialiste en Science des Données.</p>
+                        <span>Sénégal</span>
+                    </div>
+                    <div class="speaker-card" data-category="business">
+                        <img src="images/speaker4.jpg" alt="M. Cheikh Ba">
+                        <h3>M. Cheikh Ba</h3>
+                        <p>Fondateur, StartUp Dakar</p>
+                        <span>Sénégal</span>
+                    </div>
+
+                    <div class="speaker-card" data-category="design">
+                        <img src="images/speaker5.jpg" alt="Mme. Mariama Fall">
+                        <h3>Mme. Mariama Fall</h3>
+                        <p>Designer UX/UI</p>
+                        <span>Côte d'Ivoire</span>
+                    </div>
+
+                    <div class="speaker-card" data-category="business">
+                        <img src="images/speaker6.jpg" alt="M. Ousmane Sarr">
+                        <h3>M. Ousmane Sarr</h3>
+                        <p>Investisseur, Sankofa Capital</p>
+                        <span>Mali</span>
+                    </div>
+
+                    <div class="speaker-card" data-category="ia">
+                        <img src="images/speaker7.jpg" alt="Mme. Aissatou Diallo">
+                        <h3>Mme. Aissatou Diallo</h3>
+                        <p>Chercheuse en Machine Learning</p>
+                        <span>Guinée</span>
+                    </div>
+
+                    <div class="speaker-card" data-category="data">
+                        <img src="images/speaker8.jpg" alt="M. Oumar Sylla">
+                        <h3>M. Oumar Sylla</h3>
+                        <p>Architecte Cloud & Data</p>
+                        <span>Ghana</span>
+                    </div>
+
+                    <div class="speaker-card" data-category="design">
+                        <img src="images/speaker9.jpg" alt="Dr. Fatou Gaye">
+                        <h3>Dr. Fatou Gaye</h3>
+                        <p>Directrice Design, Kola Studio</p>
+                        <span>Cameroun</span>
+                    </div>
+                </div>
+            </div>
+        </section>
 
     </main>
     <footer>
+        <div class="container footer-flex">
+            <div class="footer-info">
+                <h3>AfriConnect Summit</h3>
+                <p>Rejoignez-nous pour un événement inoubliable sur l'innovation et la technologie en Afrique.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="bi bi-facebook"></i></a>
+                    <a href="#"><i class="bi bi-twitter"></i></a>
+                    <a href="#"><i class="bi bi-linkedin"></i></a>
+                    <a href="#"><i class="bi bi-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h4>Liens rapides</h4>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="programme.html">Programme</a></li>
+                    <li><a href="intervenants.html">Intervenants</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Contactez-nous</h4>
+                <p>Email: info@africonnectsummit.com</p>
+                <p>Téléphone: +221 33 888 88 88</p>
+            </div>
+        </div>
+        <p class="footer-bottom">© <span id="current-year"></span> AfriConnect Summit. Tous droits réservés.</p>
+
+
 
     </footer>
+    <button id="back-to-top" aria-label="Retour en haut">
+        <i class="bi bi-arrow-up"></i>
+    </button>
     <script src="js/main.js"></script>
     
 </body>

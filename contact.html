@@ -4,19 +4,223 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inscription & Contact</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
     
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo">AfriConnect <span>Summit</span></a>
+            <ul class="nav-links">
+                <li> <a href="index.html" >Accueil</a></li>
+                <li> <a href="programme.html">Programme</a></li>
+                <li> <a href="intervenants.html" >Intervenants</a></li>
+                <li> <a href="contact.html" class="acc">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="contact.html" class="btn">S'inscrire</a>
+                <button id="theme-toggle" aria-label="Changer le thème">
+                    <i class="bi bi-moon-stars-fill"> 🌙 </i>
+                </button>
+                <button id="menu-toggle" aria-label="Ouvrir le menu">
+                <i class="bi bi-list"></i>
+            </button>
 
+            </div>
+        </nav>
+           
     </header>
     <main>
+         <!--SECTION HERO-->
+        <section class="page-hero">
+            <div class="container">
+                <p class="bread">
+                    <a href="index.html">Accueil</a> / Contact
+                </p>
+                <h1>Inscription & Contact</h1>
+                <p>Réservez votre place pour AfriConnect Summit ou contactez notre équipe.</p>
+            </div>
+        </section>
+    <!--Formulaire + INFOS-->
+    <section class="registration">
+    <div class="container contact-layout">
 
+        <!--Colonne gauche : formulaire-->
+        <div class="contact-form-wrap">
+            <div class="form-success" id="form-success"></div>
+
+            <form id="registration-form" novalidate>
+
+                <label for="fullname">Nom complet *</label>
+                <input type="text" id="fullname" name="fullname" placeholder="Ex : Aïcha Traoré" required>
+                <span class="error-msg">Merci d'indiquer votre nom complet.</span>
+
+                <label for="email">Email *</label>
+                <input type="email" id="email" name="email" placeholder="vous@exemple.com" required>
+                <span class="error-msg">Merci d'indiquer un email valide.</span>
+
+                <label for="phone">Téléphone *</label>
+                <input type="tel" id="phone" name="phone" placeholder="+221 77 000 00 00" required>
+                <span class="error-msg">Le numéro doit contenir au moins 8 chiffres.</span>
+
+                <label for="participation">Type de participation *</label>
+                <select id="participation" name="participation" required>
+                    <option value="">Sélectionnez une option</option>
+                    <option value="visiteur">Visiteur</option>
+                    <option value="intervenant">Intervenant</option>
+                    <option value="sponsor">Sponsor</option>
+                    <option value="presse">Presse</option>
+                    <option value="etudiant">Étudiant</option>
+                </select>
+                <span class="error-msg">Merci de choisir un type de participation.</span>
+
+                <label for="country">Pays *</label>
+                <select id="country" name="country" required>
+                    <option value="">Sélectionnez votre pays</option>
+                    <option value="senegal">Sénégal</option>
+                    <option value="cote-ivoire">Côte d'Ivoire</option>
+                    <option value="ghana">Ghana</option>
+                    <option value="nigeria">Nigeria</option>
+                    <option value="kenya">Kenya</option>
+                    <option value="mali">Mali</option>
+                    <option value="guinee">Guinée</option>
+                    <option value="cameroun">Cameroun</option>
+                    <option value="maroc">Maroc</option>
+                    <option value="tunisie">Tunisie</option>
+                    <option value="benin">Bénin</option>
+                </select>
+                <span class="error-msg">Merci de choisir votre pays.</span>
+
+                <label for="message">Message / Motivation *</label>
+                <textarea id="message" name="message" placeholder="Votre message (20 caractères minimum)..." required></textarea>
+                <span class="error-msg">Votre message doit contenir au moins 20 caractères.</span>
+
+                <button type="submit" class="btn">Envoyer mon inscription</button>
+            </form>
+        </div>
+
+        <!--Colonne droite : infos-->
+        <div class="contact-info">
+            <div class="info-block">
+                <h3><i class="bi bi-geo-alt"></i> Lieu</h3>
+                <p>Centre International de Conférences Abdou Diouf (CICAD), Dakar, Sénégal</p>
+            </div>
+            <div class="info-block">
+                <h3><i class="bi bi-calendar-event"></i> Dates</h3>
+                <p>Du 15 au 18 juillet 2026</p>
+            </div>
+            <div class="info-block">
+                <h3><i class="bi bi-envelope"></i> Email</h3>
+                <p>info@africonnectsummit.com</p>
+            </div>
+            <div class="info-block">
+                <h3><i class="bi bi-telephone"></i> Téléphone</h3>
+                <p>+221 33 888 88 88</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+<!--FAQ ACCORDÉON CSS PUR-->
+<section class="faq-section">
+    <div class="container">
+        <h2>Questions fréquentes</h2>
+        <div class="faq-list">
+
+            <div class="faq-item">
+                <input type="checkbox" id="faq1">
+                <label class="faq-question" for="faq1">Le badge donne-t-il accès aux 3 jours ?</label>
+                <div class="faq-answer">
+                    <p>Oui, chaque badge est valable pour l'intégralité de l'événement.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <input type="checkbox" id="faq2">
+                <label class="faq-question" for="faq2">Puis-je obtenir une lettre d'invitation pour un visa ?</label>
+                <div class="faq-answer">
+                    <p>Oui, une lettre d'invitation officielle est envoyée par email sur demande.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <input type="checkbox" id="faq3">
+                <label class="faq-question" for="faq3">Les repas sont-ils inclus ?</label>
+                <div class="faq-answer">
+                    <p>Le déjeuner et les pauses café sont inclus dans tous les types de badges.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <input type="checkbox" id="faq4">
+                <label class="faq-question" for="faq4">Comment devenir sponsor de l'événement ?</label>
+                <div class="faq-answer">
+                    <p>Contactez notre équipe partenariats à info@africonnectsummit.com.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <input type="checkbox" id="faq5">
+                <label class="faq-question" for="faq5">Existe-t-il un tarif réduit pour les étudiants ?</label>
+                <div class="faq-answer">
+                    <p>Oui, un tarif étudiant est disponible sur présentation d'une carte étudiante valide.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!--CARTE GOOGLE MAPS-->
+<section class="map-section">
+    <div class="container">
+        <div class="map-wrap">
+            <iframe
+                src="https://www.google.com/maps?q=Dakar,Senegal&output=embed"
+                title="Carte de localisation de Dakar, Sénégal"
+                loading="lazy">
+            </iframe>
+        </div>
+    </div>
+</section>
+    
     </main>
     <footer>
-
+         <div class="container footer-flex">
+            <div class="footer-info">
+                <h3>AfriConnect Summit</h3>
+                <p>Rejoignez-nous pour un événement inoubliable sur l'innovation et la technologie en Afrique.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="bi bi-facebook"></i></a>
+                    <a href="#"><i class="bi bi-twitter"></i></a>
+                    <a href="#"><i class="bi bi-linkedin"></i></a>
+                    <a href="#"><i class="bi bi-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h4>Liens rapides</h4>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="programme.html">Programme</a></li>
+                    <li><a href="intervenants.html">Intervenants</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Contactez-nous</h4>
+                <p>Email: info@africonnectsummit.com</p>
+                <p>Téléphone: +221 33 888 88 88</p>
+            </div>
+        </div>
+        <p class="footer-bottom">© <span id="current-year"></span> AfriConnect Summit. Tous droits réservés.</p>
     </footer>
+    <button id="back-to-top" aria-label="Retour en haut">
+    <i class="bi bi-arrow-up"></i>
+</button>
     <script src="js/main.js"></script>
     
 </body>

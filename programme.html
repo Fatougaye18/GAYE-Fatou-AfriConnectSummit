@@ -4,18 +4,256 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Programme</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo">AfriConnect <span>Summit</span></a>
+            <ul class="nav-links">
+                <li> <a href="index.html">Accueil</a></li>
+                <li> <a href="programme.html" class="acc">Programme</a></li>
+                <li> <a href="intervenants.html">Intervenants</a></li>
+                <li> <a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="contact.html" class="btn">S'inscrire</a>
+                <button id="theme-toggle" aria-label="Changer le thème">
+                    <i class="bi bi-moon-stars-fill"> 🌙 </i>
+                </button>
+                <button id="menu-toggle" aria-label="Ouvrir le menu">
+                <i class="bi bi-list"></i>
+            </button>
+
+            </div>
+        </nav>
 
     </header>
     <main>
+        <!--SECTION HERO-->
+        <section class="page-hero">
+            <div class="container">
+            <p class="bread">
+                <a href="index.html">Accueil</a> / Programme
+            </p>
+                <h1>Programme du sommet</h1>
+                <p>Découvrez le programme complet de l'événement AfriConnect Summit, avec des conférences, des ateliers et des sessions de réseautage passionnantes.</p>
+            </div>
+        </section>
+        <!--Onglets 3 jours-->
+        <section class="tabs">
+            <div class="container">
+                <div class="tab-buttons">
+                    <button class="tab-btn active" data-tab="day1">Jour 1</button>
+                    <button class="tab-btn" data-tab="day2">Jour 2</button>
+                    <button class="tab-btn" data-tab="day3">Jour 3</button>
+                </div>
+                <div class="tab-content">
+                    <div id="day1" class="tab-pane active">
+                        <table class="programme-table">
+                            <thead>
+                                <tr>
+                                    <th>Heure</th>
+                                    <th>Session</th>
+                                    <th>Intervenant</th>
+                                    <th>Salle</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>09:00 - 10:00</td>
+                                    <td>Ouverture et discours de bienvenue</td>
+                                    <td>Dr. Fatou Gaye</td>
+                                    <td>Amphithéâtre A</td>
+                                </tr>
+                                <tr>
+                                    <td>10:15 - 11:15</td>
+                                    <td>Conférence sur l'innovation en Afrique</td>
+                                    <td>M. Mamadou Diop</td>
+                                    <td>Salle B</td>
+                                </tr>
+                                <tr>
+                                    <td>11:30 - 12:30</td>
+                                    <td>Atelier sur les technologies émergentes</td>
+                                    <td>Mme. Awa Ndiaye</td>
+                                    <td>Salle C</td>
+                                </tr>
+                                <tr>
+                                    <td>12:30 - 14:00</td>
+                                    <td>Pause déjeuner</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>14:00 - 15:00</td>
+                                    <td>Panel sur l'entrepreneuriat en Afrique</td>
+                                    <td>M. Cheikh Ba, Mme. Mariama Fall, M. Ousmane Sarr</td>
+                                    <td>Amphithéâtre A</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div id="day2" class="tab-pane">
+                        <table class="programme-table">
+                            <thead>
+                                <tr>
+                                    <th>Heure</th>
+                                    <th>Session</th>
+                                    <th>Intervenant</th>
+                                    <th>Salle</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>09:00 - 10:00</td>
+                                    <td>Conférence sur l'IA et la data</td>
+                                    <td>Dr. Awa Diop</td>
+                                    <td>Amphithéâtre A</td>
+                                </tr>
+                                <tr>
+                                    <td>10:15 - 11:15</td>
+                                    <td>Atelier sur le développement durable</td>
+                                    <td>Mme. Fatou Ndiaye</td>
+                                    <td>Salle B</td>
+                                </tr>
+                                <tr>
+                                    <td>11:30 - 12:30</td>
+                                    <td>Panel sur l'innovation sociale</td>
+                                    <td>M. Mamadou Ba, Mme. Aissatou Diallo, M. Oumar Sylla</td>
+                                    <td>Salle C</td>
+                                </tr>
+                                <tr>
+                                    <td>12:30 - 14:00</td>
+                                    <td>Pause déjeuner</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>14:00 - 15:00</td>
+                                    <td>Conférence sur les startups africaines</td>
+                                    <td>M. Cheikh Fall</td>
+                                    <td>Amphithéâtre A</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div id="day3" class="tab-pane">
+                        <table class="programme-table">
+                            <thead>
+                                <tr>
+                                    <th>Heure</th>
+                                    <th>Session</th>
+                                    <th>Intervenant</th>
+                                    <th>Salle</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>09:00 - 10:00</td>
+                                    <td>Atelier sur l'innovation technologique</td>
+                                    <td>Mme. Awa Ndiaye</td>
+                                    <td>Salle B</td>
+                                </tr>
+                                <tr>
+                                    <td>10:15 - 11:15</td>
+                                    <td>Conférence sur l'entrepreneuriat féminin</td>
+                                    <td>Mme. Mariama Fall</td>
+                                    <td>Amphithéâtre A</td>
+                                </tr>
+                                <tr>
+                                    <td>11:30 - 12:30</td>
+                                    <td>Panel sur les opportunités d'investissement en Afrique</td>
+                                    <td>M. Ousmane Sarr, Mme. Fatou Gaye, M. Cheikh Ba</td>
+                                    <td>Salle C</td>
+                                </tr>
+                                <tr>
+                                    <td>12:30 - 14:00</td>
+                                    <td>Pause déjeuner</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>14:00 - 15:00</td>
+                                    <td>Clôture et remerciements</td>
+                                    <td>Dr. Fatou Gaye</td>
+                                    <td>Amphithéâtre A</td>
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--SECTION THEMATIQUES-->
+        <section class="themes">
+            <div class="container">
+                <h2>Thématiques</h2>
+                <div class="themes-grid">
+                    <div class="theme-card anim">
+                        <i class="bi bi-laptop"></i>
+                        <h3>Intelligence Artificielle</h3>
+                        <p>Découvrez les dernières avancées en intelligence artificielle et leur impact sur l'économie africaine.</p>
+                    </div>
+                    <div class="theme-card anim">
+                        <i class="bi bi-database"></i>
+                        <h3>Science des Données</h3>
+                        <p>Apprenez à exploiter les données pour prendre des décisions éclairées et stimuler l'innovation.</p>
+                    </div>
+                    <div class="theme-card anim">
+                        <i class="bi bi-graph-up"></i>
+                        <h3>Entrepreneuriat</h3>
+                        <p>Explorez les opportunités d'entrepreneuriat et les stratégies pour faire réussir vos projets.</p>
+                    </div>
+                    <div class="theme-card anim">
+                        <i class="bi bi-lightbulb"></i>
+                        <h3>Innovation</h3>
+                        <p>Découvrez comment l'innovation peut transformer les industries et créer de nouvelles opportunités.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
     </main>
     <footer>
+        <div class="container footer-flex">
+            <div class="footer-info">
+                <h3>AfriConnect Summit</h3>
+                <p>Rejoignez-nous pour un événement inoubliable sur l'innovation et la technologie en Afrique.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="bi bi-facebook"></i></a>
+                    <a href="#"><i class="bi bi-twitter"></i></a>
+                    <a href="#"><i class="bi bi-linkedin"></i></a>
+                    <a href="#"><i class="bi bi-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h4>Liens rapides</h4>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="programme.html">Programme</a></li>
+                    <li><a href="intervenants.html">Intervenants</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Contactez-nous</h4>
+                <p>Email: info@africonnectsummit.com</p>
+                <p>Téléphone: +221 33 888 88 88</p>
+            </div>
+        </div>
+        <p class="footer-bottom">© <span id="current-year"></span> AfriConnect Summit. Tous droits réservés.</p>
+
 
     </footer>
+    <button id="back-to-top" aria-label="Retour en haut">
+        <i class="bi bi-arrow-up"></i>
+    </button>
     <script src="js/main.js"></script>
     
 </body>
