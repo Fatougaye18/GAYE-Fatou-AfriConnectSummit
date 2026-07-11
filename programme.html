@@ -13,10 +13,16 @@
 <body>
     <header>
         <nav class="navbar">
-            <a href="index.html" class="logo">AfriConnect <span>Summit</span></a>
+            <a href="index.html" class="logo">
+                <span class="logo-triangle"></span>
+                <span class="logo-text">
+                    <span class="logo-main">AfriConnect</span>
+                    <span class="logo-sub">Summit 2026</span>
+                </span>
+            </a>
             <ul class="nav-links">
-                <li> <a href="index.html">Accueil</a></li>
-                <li> <a href="programme.html" class="acc">Programme</a></li>
+                <li> <a href="index.html" >Accueil</a></li>
+                <li> <a href="programme.html"class="acc">Programme</a></li>
                 <li> <a href="intervenants.html">Intervenants</a></li>
                 <li> <a href="contact.html">Contact</a></li>
             </ul>
@@ -31,21 +37,27 @@
 
             </div>
         </nav>
-
     </header>
     <main>
-        <!--SECTION HERO-->
         <section class="page-hero">
-            <div class="container">
+    <div class="container page-hero-grid">
+        <div class="page-hero-text">
             <p class="bread">
                 <a href="index.html">Accueil</a> / Programme
             </p>
-                <h1>Programme du sommet</h1>
-                <p>Découvrez le programme complet de l'événement AfriConnect Summit, avec des conférences, des ateliers et des sessions de réseautage passionnantes.</p>
-            </div>
-        </section>
+            <h1>Programme du sommet</h1>
+            <p>Découvrez le programme complet de l'événement AfriConnect Summit, avec des conférences, des ateliers et des sessions de réseautage passionnantes.</p>
+        </div>
+
+        <div class="page-hero-video">
+            <video autoplay muted loop playsinline>
+                <source src="https://videos.pexels.com/video-files/8244250/8244250-uhd_2560_1440_25fps.mp4" type="video/mp4">
+            </video>
+        </div>
+    </div>
+</section>
         <!--Onglets 3 jours-->
-        <section class="tabs">
+        <section class="tabs-section">
             <div class="container">
                 <div class="tab-buttons">
                     <button class="tab-btn active" data-tab="day1">Jour 1</button>
@@ -220,40 +232,63 @@
         </section>
 
     </main>
-    <footer>
-        <div class="container footer-flex">
-            <div class="footer-info">
-                <h3>AfriConnect Summit</h3>
-                <p>Rejoignez-nous pour un événement inoubliable sur l'innovation et la technologie en Afrique.</p>
-                <div class="social-icons">
-                    <a href="#"><i class="bi bi-facebook"></i></a>
-                    <a href="#"><i class="bi bi-twitter"></i></a>
-                    <a href="#"><i class="bi bi-linkedin"></i></a>
-                    <a href="#"><i class="bi bi-instagram"></i></a>
-                </div>
-            </div>
-            <div class="footer-links">
-                <h4>Liens rapides</h4>
-                <ul>
-                    <li><a href="index.html">Accueil</a></li>
-                    <li><a href="programme.html">Programme</a></li>
-                    <li><a href="intervenants.html">Intervenants</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </div>
-            <div class="footer-contact">
-                <h4>Contactez-nous</h4>
-                <p>Email: info@africonnectsummit.com</p>
-                <p>Téléphone: +221 33 888 88 88</p>
+    <footer class="footer">
+    <div class="container footer-flex">
+        <div class="footer-info">
+            <a href="index.html" class="logo">
+    <span class="logo-triangle"></span>
+    <span class="logo-text">
+        <span class="logo-main">AfriConnect</span>
+        <span class="logo-sub">Summit 2026</span>
+    </span>
+</a>
+            <p>Le plus grand sommet technologique panafricain qui connecte les talents, les idées et les opportunités.</p>
+            <div class="social-icons">
+                <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                <a href="#" aria-label="Twitter"><i class="bi bi-twitter"></i></a>
+                <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
             </div>
         </div>
-        <p class="footer-bottom">© <span id="current-year"></span> AfriConnect Summit. Tous droits réservés.</p>
 
+        <div class="footer-links">
+            <h4>Navigation</h4>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="programme.html">Programme</a></li>
+                <li><a href="intervenants.html">Intervenants</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
 
-    </footer>
-    <button id="back-to-top" aria-label="Retour en haut">
-        <i class="bi bi-arrow-up"></i>
-    </button>
+        <div class="footer-info-links">
+            <h4>Informations</h4>
+            <ul>
+                <li><a href="#">À propos</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Conditions générales</a></li>
+                <li><a href="#">Politique de confidentialité</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-newsletter">
+            <h4>Newsletter</h4>
+            <p>Restez informé des dernières actualités et annonces du sommet.</p>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Votre email" required>
+                <button type="submit" aria-label="S'abonner"><i class="bi bi-arrow-right"></i></button>
+            </form>
+        </div>
+    </div>
+
+    <p class="footer-bottom">© <span id="current-year"></span> AfriConnect Summit. Tous droits réservés.</p>
+</footer>
+
+<button id="back-to-top" aria-label="Retour en haut">
+    <i class="bi bi-arrow-up"></i>
+</button>
+    
     <script src="js/main.js"></script>
     
 </body>
