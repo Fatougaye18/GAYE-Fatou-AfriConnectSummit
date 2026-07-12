@@ -1260,3 +1260,52 @@ ul {
 @media (max-width: 900px) {
   .contact-layout { flex-direction: column; }
 }
+body.light {
+  --color-bg: #f5f3fa;
+  --color-surface: #ffffff;
+  --color-surface-alt: #ece9f5;
+  --color-text: #000000;
+  --color-text-muted: #5b5570;
+  --color-border: #e0dcee;
+}
+body.light .hero-overlay {
+  background: linear-gradient(180deg, rgba(245,243,250,0.55), rgba(245,243,250,0.92));
+}
+
+body.light .navbar.scrolled {
+  background-color: rgba(245, 243, 250, 0.85);
+}
+.hamburger {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: min(75vw, 300px);
+    background: var(--color-surface);
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2rem;
+    padding: 2rem;
+    transform: translateX(100%);
+    transition: transform 0.35s ease;
+    z-index: 999;
+  }
+
+  .nav-links.open {
+    transform: translateX(0);
+  }
+
+  .nav-actions .btn {
+    display: none;
+  }
+
+  #menu-toggle {
+    display: flex;
+  }
+}
