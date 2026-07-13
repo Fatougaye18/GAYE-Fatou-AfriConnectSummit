@@ -27,3 +27,72 @@ themeToggle.addEventListener("click", () => {
   }
 
 });
+// Date fictive de la conférence
+const targetDate = new Date("2026-11-14T09:00:00").getTime();
+
+const daysEl = document.getElementById("days");
+const hoursEl = document.getElementById("hours");
+const minutesEl = document.getElementById("minutes");
+const secondsEl = document.getElementById("seconds");
+
+function updateCountdown() {
+  const now = new Date().getTime();
+  const distance = targetDate - now;
+
+  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  daysEl.textContent = days;
+  hoursEl.textContent = hours;
+  minutesEl.textContent = minutes;
+  secondsEl.textContent = seconds;
+}
+
+updateCountdown();
+setInterval(updateCountdown, 1000);
+const statNumbers = document.querySelectorAll(".stat-number");
+
+function animateCounter(element) {
+  const target = parseInt(element.getAttribute("data-target"));
+  let current = 0;
+  const step = Math.ceil(target / 60);
+
+  const counterInterval = setInterval(() => {
+    current += step;
+
+    if (current >= target) {
+      element.textContent = target;
+      clearInterval(counterInterval);
+    } else {
+      element.textContent = current;
+    }
+  }, 25);
+}
+const animatedElements = document.querySelectorAll(".anim");
+
+const observer = new IntersectionObserver((entries) => {
+
+  entries.forEach((entry) => {
+
+    if (entry.isIntersecting) {
+      entry.target.classList.add("show");
+
+      // Si l'élément visible est une carte de statistique, on lance son compteur
+      if (entry.target.classList.contains("stat-item")) {
+        const number = entry.target.querySelector(".stat-number");
+        animateCounter(number);
+      }
+
+      // On arrête de surveiller cet élément une fois l'animation lancée
+      observer.unobserve(entry.target);
+    }
+
+  });
+
+}, { threshold: 0.3 });
+
+animatedElements.forEach((element) => {
+  observer.observe(element);
+});
