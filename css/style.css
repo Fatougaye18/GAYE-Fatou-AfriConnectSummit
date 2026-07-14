@@ -1118,19 +1118,19 @@ ul {
   margin-top: 0.3rem;
 }
 
-.form-group.invalid .error-msg {
+.error-msg.visible {
   display: block;
 }
 
-.form-group.invalid input,
-.form-group.invalid select,
-.form-group.invalid textarea {
+input.invalid,
+select.invalid,
+textarea.invalid {
   border-color: #f87171;
 }
 
-.form-group.valid input,
-.form-group.valid select,
-.form-group.valid textarea {
+input.valid,
+select.valid,
+textarea.valid {
   border-color: #34d399;
 }
 
@@ -1318,4 +1318,7 @@ body.light .navbar.scrolled {
 .anim.show {
   opacity: 1;
   transform: translateY(0);
+}
+.speaker-card.hidden {
+  display: none;
 }
