@@ -1322,3 +1322,15 @@ body.light .navbar.scrolled {
 .speaker-card.hidden {
   display: none;
 }
+#back-to-top {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+}
+
+#back-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}

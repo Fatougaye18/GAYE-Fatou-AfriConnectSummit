@@ -286,3 +286,30 @@ function showValid(field) {
   field.classList.add("valid");
   field.nextElementSibling.classList.remove("visible");
 }
+/*    
+   BOUTON RETOUR EN HAUT
+     */
+const backToTop = document.getElementById("back-to-top");
+
+function handleBackToTop() {
+  if (window.scrollY > 300) {
+    backToTop.classList.add("visible");
+  } else {
+    backToTop.classList.remove("visible");
+  }
+}
+
+window.addEventListener("scroll", handleBackToTop);
+handleBackToTop();
+
+backToTop.addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
+/*  
+   ANNÉE DYNAMIQUE DANS LE FOOTER
+   */
+const yearEl = document.getElementById("current-year");
+
+if (yearEl) {
+  yearEl.textContent = new Date().getFullYear();
+}
